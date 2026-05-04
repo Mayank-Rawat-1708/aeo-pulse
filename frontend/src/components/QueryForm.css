@@ -1,0 +1,97 @@
+.qf-outer {
+  max-width: 660px; margin: 0 auto; padding: 0 24px 100px;
+  position: relative; z-index: 1;
+}
+.qf-card {
+  background: linear-gradient(170deg, rgba(255,255,255,0.042) 0%, rgba(255,255,255,0.016) 100%);
+  border: 1px solid var(--border2);
+  border-top-color: rgba(255,255,255,0.14);
+  border-radius: 28px; padding: 38px 36px 28px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.45), 0 0 0 1px rgba(200,168,75,0.06);
+}
+.qf-top { margin-bottom: 28px; }
+.qf-headline {
+  font-family: var(--font-serif); font-size: 22px; font-weight: 500;
+  letter-spacing: -0.01em; margin-bottom: 6px; color: var(--text);
+}
+.qf-hint { font-size: 13px; color: var(--text2); line-height: 1.6; font-weight: 300; }
+
+.qf-fields { display: flex; flex-direction: column; }
+
+.qf-field {
+  padding: 16px 0 4px;
+  transition: all 0.2s;
+}
+.qf-label {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--text3); margin-bottom: 10px;
+  transition: color 0.2s;
+}
+.qf-field.focused .qf-label { color: var(--gold); }
+.qf-label-num {
+  font-family: var(--font-mono); font-size: 9px;
+  color: var(--gold); opacity: 0.5;
+}
+.qf-optional {
+  font-size: 10px; text-transform: none; letter-spacing: 0;
+  color: var(--text3); opacity: 0.6; font-weight: 400;
+}
+.qf-input-wrap { position: relative; }
+.qf-icon {
+  position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
+  color: var(--text3); pointer-events: none; transition: color 0.2s;
+}
+.qf-field.focused .qf-icon { color: var(--gold); opacity: 0.7; }
+.qf-input {
+  width: 100%; background: rgba(0,0,0,0.35);
+  border: 1px solid var(--border2); border-radius: 14px;
+  padding: 14px 16px 14px 44px;
+  color: var(--text); font-family: var(--font-sans); font-size: 14px; font-weight: 400;
+  outline: none; transition: all 0.2s;
+}
+.qf-input::placeholder { color: var(--text3); }
+.qf-input:focus {
+  border-color: rgba(200,168,75,0.4);
+  box-shadow: 0 0 0 3px rgba(200,168,75,0.07), inset 0 1px 0 rgba(255,255,255,0.05);
+  background: rgba(0,0,0,0.45);
+}
+
+.qf-connector {
+  display: flex; align-items: center; gap: 10px; padding: 6px 0;
+}
+.qf-connector-line { flex: 1; height: 1px; background: var(--border); }
+.qf-connector-plus { font-size: 16px; color: var(--text3); font-weight: 300; }
+
+.qf-btn {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  width: 100%; margin-top: 24px;
+  background: linear-gradient(135deg, var(--gold2) 0%, var(--gold) 50%, #9a7228 100%);
+  color: #0a0808; border: none; border-radius: 14px;
+  padding: 16px 28px;
+  font-family: var(--font-sans); font-size: 15px; font-weight: 600;
+  cursor: pointer; letter-spacing: 0.02em;
+  box-shadow: 0 4px 24px rgba(200,168,75,0.28), inset 0 1px 0 rgba(255,255,255,0.3);
+  transition: box-shadow 0.25s;
+}
+.qf-btn:hover { box-shadow: 0 8px 36px rgba(200,168,75,0.45), inset 0 1px 0 rgba(255,255,255,0.3); }
+.qf-btn-arrow {
+  width: 26px; height: 26px; border-radius: 50%;
+  background: rgba(0,0,0,0.15); display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+}
+
+.qf-examples {
+  display: flex; align-items: center; gap: 8px;
+  margin-top: 18px; flex-wrap: wrap;
+}
+.qf-ex-label { font-size: 10px; color: var(--text3); white-space: nowrap; letter-spacing: 0.05em; }
+.qf-chip {
+  background: transparent; border: 1px solid var(--border);
+  color: var(--text3); font-family: var(--font-mono); font-size: 10px;
+  padding: 4px 12px; border-radius: 100px; cursor: pointer;
+  transition: all 0.15s; white-space: nowrap;
+}
+.qf-chip:hover { border-color: rgba(200,168,75,0.3); color: var(--gold); background: rgba(200,168,75,0.05); }
+
+@media (max-width:600px) { .qf-card { padding: 24px 18px; } }
