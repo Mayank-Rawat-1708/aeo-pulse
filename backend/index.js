@@ -23,9 +23,7 @@ process.on("unhandledRejection", (reason) => {
 });
 
 const app = express();
-app.use(cors({
-  origin: ["https://aeo-pulse-two.vercel.app/", "http://localhost:5173"]
-}));
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 
 // ── Clients ────────────────────────────────────────────────────────────────────
